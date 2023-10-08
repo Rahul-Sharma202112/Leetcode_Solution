@@ -12,19 +12,17 @@ You must not use any built-in library function, such as sqrt.
 class Solution:
     def isPerfectSquare(self, num: int) -> bool:
 
-# approach 1:
-     """
-       x,square=1,0
+# solution 1:
+#          x,square=1,0
         
-        while(square<num):
-            square=x**2
-            if square == num:
-                return True
-            x+=1
-        return False
-     """   
-        
-# approach 2:
+#         while(square<num):
+#             square=x**2
+#             if square == num:
+#                 return True
+#             x+=1
+#         return False
+
+# solution 2:
 
         l,r= 0,num
         
@@ -32,10 +30,10 @@ class Solution:
             mid=(l+r)//2
             squared=mid**2
             if squared ==num:
-                    return True
+                return True
             elif squared<num:
-                    l =mid+1
+                l =mid+1
             else:
-                    r=mid-1
-                    
+                r=mid-1
+                
         return False
